@@ -1,0 +1,45 @@
+.signup-wrapper h1, h2{
+    text-align: center;
+}
+
+.signup-input-wrapper {
+    width: 300px;
+    margin : 0 auto;
+}
+
+.signup-input-wrapper input, button {
+    width: 100%;
+    padding : 12px 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: 300;
+}
+
+.signup-input-wrapper input:focus {
+    outline: none;
+}
+
+.signup-input-wrapper button {
+    font-family: inherit;
+    padding : 12px;
+    border: none;
+    background-color: #4b7c81;
+    color : white;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.signup-input-wrapper button:hover {
+    cursor: pointer;      
+}
+
+
+.signup-info {
+    font-weight: 100;
+    margin-bottom: 10px;
+    font-size: 14px;
+}

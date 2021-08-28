@@ -1,0 +1,38 @@
+/* 토스트 UI */
+
+.toastui-editor-main {
+    font-family: inherit;
+}
+
+/* 글작성 페이지 */
+
+.board-write-wrapper{
+
+}
+
+.board-write-wrapper input {
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding : 8px 6px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 200;
+}
+
+.write-btn {
+    margin-top: 20px;
+    text-align: right;
+}
+
+
+.write-btn a {
+    display: inline-block;
+    padding : 5px;
+    border-radius: 3px;
+    border: 1px solid #999;
+    font-weight: 200;
+    color : #555;
+}

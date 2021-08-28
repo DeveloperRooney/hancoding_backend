@@ -1,0 +1,50 @@
+.login-wrapper h1, h2 {
+    text-align: center;
+}
+
+.login-wrapper h2{
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.login-input-wrapper {
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+}
+
+.login-input-wrapper input, button {
+    width: 100%;
+    padding : 12px 5px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.login-input-wrapper input:focus {
+    outline: none;
+}   
+
+.login-input-wrapper button {
+    font-family: inherit;
+    padding : 12px;
+    border: none;
+    background-color: #4b7c81;
+    color : white;
+}
+
+.login-input-wrapper button:hover {
+    cursor: pointer;      
+}
+
+.login-input-wrapper a {
+    display: inline-block;
+    margin-top: 10px;
+    color : #888;
+    font-weight: 100;
+}

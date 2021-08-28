@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="/js/main.js"></script>
+
+    <title>한코딩 :: 로그인</title>
+</head>
+
+
+<body>
+
+
+    <header>
+        <div class="layout topmenu">
+            <div><a href="index.html"><span class="logo mark"><i class="fas fa-code"></span></i><span class="logo logo-left">HAN</span><span class="logo"> Coding</span></a></div>
+
+            <div></div>
+            <div class="right-menu">
+                <ul>
+                    <li><a href="#">강의</a></li>
+                    <li><a href="articlelist.html">게시판</a></li>
+                    <li><a href="login.html">로그인</a></li>
+                </ul>
+            </div>
+            <div class="ham-btn" id="ham-btn">
+                <a href="javascript:openSideNav()"><i class="fas fa-bars"></i></a>
+            </div>
+        </div>
+        <div class="sidenav" id="sidenav">
+            <a href="javascript:closeSideNav()">&times;</a>
+            <a href="#">강의</a>
+            <a href="articlelist.html">게시판</a>
+            <a href="login.html">로그인</a>
+        </div>
+    </header>
+    <main>
+        <div class="login-wrapper layout">
+            <h1>로그인</h1>
+            <h2>안녕하세요! 오늘도 반가워요!</h2>
+            <div class="login-input-wrapper">
+                <input type="text" autocomplete="off">
+                <input type="password">
+                <button type="button">로그인</button>
+                <button type="button" onclick="location.href='signup.html'">회원가입</button>
+                <a href="searchaccount.html">아이디 | 비밀번호 찾기</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span>copyright 2021 한코딩. all rights reserved.</span>
+    </footer>
+</body>
+</html>

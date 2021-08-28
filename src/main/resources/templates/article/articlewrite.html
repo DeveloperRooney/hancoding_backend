@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/articlewrite.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="/js/articlewrite.js"></script>
+
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+
+
+    <title>한코딩 :: 글작성</title>
+</head>
+<body>
+<header>
+    <div class="layout topmenu">
+        <div><a href="index.html"><span class="logo mark"><i class="fas fa-code"></span></i><span class="logo logo-left">HAN</span><span class="logo"> Coding</span></a></div>
+
+        <div></div>
+        <div class="right-menu">
+            <ul>
+                <li><a href="#">강의</a></li>
+                <li><a href="articlelist.html">게시판</a></li>
+                <li><a href="login.html">로그인</a></li>
+            </ul>
+        </div>
+        <div class="ham-btn" id="ham-btn">
+            <a href="javascript:openSideNav()"><i class="fas fa-bars"></i></a>
+        </div>
+    </div>
+    <div class="sidenav" id="sidenav">
+        <a href="javascript:closeSideNav()">&times;</a>
+        <a href="#">강의</a>
+        <a href="articlelist.html">게시판</a>
+        <a href="login.html">로그인</a>
+    </div>
+</header>
+<main>
+    <div class="board-wrapper layout">
+        <h1>글작성</h1>
+        <h2>자유롭게 글을 작성해주세요!</h2>
+        <div class="board-write-wrapper">
+            <form action="/article/write" method="post" name="write_form">
+                <input type="text" name="title" class="title" placeholder="제목" autocomplete="off">
+                <div id="editor"></div>
+                <div class="write-btn">
+                    <a href="javascript:write()"><i class="far fa-edit"></i> 작성</a>
+                </div>
+                <textarea name="content" id="content" style="display: none"></textarea>
+            </form>
+        </div>
+    </div>
+</main>
+<footer>
+    <span>copyright 2021 한코딩. all rights reserved.</span>
+</footer>
+</body>
+
+
+<script>
+
+    const Editor = toastui.Editor;
+
+    const editor = new Editor({
+        el: document.querySelector('#editor'),
+        height: '450px',
+        initialEditType: 'wysiwyg',
+        previewStyle: 'vertical'
+    });
+
+
+
+    function write() {
+
+        const toastContent = editor.getHTML();
+
+        const content = document.getElementById("content");
+
+        content.value = toastContent;
+
+        if(write_form.title.value == '') {
+            alert('제목을 입력해 주세요.');
+            write_form.title.focus();
+            return;
+        }else if(write_form.content.value == '') {
+            alert('내용을 입력해 주세요.');
+            write_form.content.focus();
+            return;
+
+        }
+
+        write_form.submit();
+
+    }
+
+</script>
+
+</html>

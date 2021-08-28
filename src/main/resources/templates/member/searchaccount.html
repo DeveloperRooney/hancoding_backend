@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="js/main.js"></script>
+
+    <title>한코딩 :: 아이디, 비밀번호 찾기</title>
+</head>
+<body>
+    <header>
+        <div class="layout topmenu">
+            <div><a href="index.html"><span class="logo mark"><i class="fas fa-code"></span></i><span class="logo logo-left">HAN</span><span class="logo"> Coding</span></a></div>
+
+            <div></div>
+            <div class="right-menu">
+                <ul>
+                    <li><a href="#">강의</a></li>
+                    <li><a href="articlelist.html">게시판</a></li>
+                    <li><a href="login.html">로그인</a></li>
+                </ul>
+            </div>
+            <div class="ham-btn" id="ham-btn">
+                <a href="javascript:openSideNav()"><i class="fas fa-bars"></i></a>
+            </div>
+        </div>
+        <div class="sidenav" id="sidenav">
+            <a href="javascript:closeSideNav()">&times;</a>
+            <a href="#">강의</a>
+            <a href="articlelist.html">게시판</a>
+            <a href="login.html">로그인</a>
+        </div>
+    </header>
+    <main>
+        <div class="search-wrapper layout">
+            <h1>계정 찾기</h1>
+            <h2>아이디 혹은 비밀번호가 기억이 나지 않으신가요?</h2>
+            <div class="search-input-wrapper">
+                <div class="search-info">아이디 찾기</div>
+                <input type="text" autocomplete="off" placeholder="이메일 입력">
+                <button type="button">아이디 확인</button>
+                <div class="search-info">비밀번호 찾기</div>
+                <input type="text" placeholder="아이디 입력">
+                <input type="text" placeholder="이메일 입력">
+                <button type="button">비밀번호 찾기</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span>copyright 2021 한코딩. all rights reserved.</span>
+    </footer>
+</body>
+</html>

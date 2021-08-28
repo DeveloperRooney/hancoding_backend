@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="/js/main.js"></script>
+
+
+    <title>한코딩 :: 환영합니다!</title>
+</head>
+
+<style>
+    .cong-msg {
+        border: 1px solid #999;
+        border-radius: 4px;
+        padding : 40px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <header th:replace="include/header">
+    </header>
+    <main>
+        <div class="signup-wrapper layout">
+            <h1>환영합니다!</h1>
+            <h2>같이 웹 개발하며 부족한 부분을 공유해요!</h2>
+            <div class="signup-input-wrapper">
+                <div class="cong-msg">
+                    <p>가입 시 입력하신 메일로 인증 링크가 발송되었습니다.
+                        메일 인증 후 로그인이 가능하니 꼭 확인 후 인증해주세요!
+                    </p>
+                </div>
+                <button type="button">한코딩 메인으로</button>
+            </div>
+        </div>
+    </main>
+    <footer th:replace="include/footer">
+    </footer>
+</body>
+</html>

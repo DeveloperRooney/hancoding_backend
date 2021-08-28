@@ -1,0 +1,40 @@
+.search-wrapper h1, h2 {
+    text-align: center;
+}
+
+.search-wrapper h2{
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.search-input-wrapper {
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+}
+
+
+.search-input-wrapper input, button {
+    width: 100%;
+    padding : 12px 5px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: 100;
+}
+
+.search-input-wrapper button {
+
+    background-color : #4b7c81;
+    color: white;
+    border: none;
+}
+
+.search-info {
+    margin : 20px 0 10px 0;
+    text-align: left;
+}

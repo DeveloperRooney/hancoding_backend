@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css" />
+    <link rel="stylesheet" href="/css/toast.css" />
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/articleview.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="/js/main.js"></script>
+
+
+
+    <title>한코딩 :: 게시글</title>
+</head>
+
+
+<body>
+
+
+    <header th:replace="include/header">
+    </header>
+    <main>
+        <div class="view-wrapper layout">
+            <h1>게시글</h1>
+            <h2>게시판 이용 시 에티켓을 지켜주세요.</h2>
+            
+            <div class="board-select">
+                <div class="page-info">
+                    <i class="far fa-file"></i> 글번호 1234
+                </div>
+                <div class="board-select-right">
+                    <a  class= "write-btn" href="articlemodify.html"><i class="far fa-edit"></i> 글수정</a>
+                    <a  class= "write-btn" href="#"><i class="far fa-edit"></i> 글삭제</a>
+                </div>
+            </div>
+      
+            <div class="article-view">
+                <div class="title" th:text="${article.title}">
+                    게시판 이용 공지
+                </div>
+                <div class="article-info">
+                    <i class="far fa-user"></i> <span th:text="${article.writer}">관리자</span> / <i class="far fa-clock"></i> <span th:text="${article.regdate}">2021-08-21</span>  / <i class="far fa-eye"></i> <span th:text="${article.count}">100</span> / <i class="far fa-thumbs-up"></i> <span th:text="${article.like}">30</span>
+                </div>
+            </div>
+            <div class="article-content-wrapper">
+                <div class="article-content" id="viewer">
+                    <p th:utext="${article.content}">안녕하세요. 한코딩 페이지 관리자입니다. 해당 글은 게시글 상세 페이지 디자인 및 테스트용으로 생성된 페이지입니다. 현재 모든 글의 작성, 수정 및 삭제 기능이 이뤄지고 있지 않습니다.</p>
+                </div>
+                <div class="thumps-up">
+                    <a href="#">
+                        <i class="far fa-thumbs-up"></i>추천
+                    </a>
+                </div>
+            </div>
+            <div class="comment-wrapper">
+                <div class="comment-count"><i class="far fa-comment-dots"></i> 전체 댓글 3개</div>
+                <div class="comment-write-wrapper">
+                    <ul>
+                        <li>
+                            <div class="">
+                                <div class="comment-writer">한코딩</div>
+                                <p>이거 지금 잘 써지는 거 맞음? 존나 이상하게 써지는 것 같기도 하고 잘 써지는 것 같기도 하고.. 디자인을 좀 더 바꿔야 할듯?<span class="comment-regdate">08-25 22:59:44</span><span class="comment-icons"><a href="#"><i class="far fa-edit"></i></a></span><span class="comment-icons"><a href="#"><i class="far fa-trash-alt"></i></a></span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="">
+                                <div class="comment-writer">한코딩</div>
+                                <p>이거 지금 잘 써지는 거 맞음? 존나 이상하게 써지는 것 같기도 하고 잘 써지는 것 같기도 하고.. 디자인을 좀 더 바꿔야 할듯?<span class="comment-regdate">08-25 22:59:44</span><span class="comment-icons"><a href="#"><i class="far fa-edit"></i></a></span><span class="comment-icons"><a href="#"><i class="far fa-trash-alt"></i></a></span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="">
+                                <div class="comment-writer">한코딩</div>
+                                <p>이거 지금 잘 써지는 거 맞음? 존나 이상하게 써지는 것 같기도 하고 잘 써지는 것 같기도 하고.. 디자인을 좀 더 바꿔야 할듯?<span class="comment-regdate">08-25 22:59:44</span><span class="comment-icons"><a href="#"><i class="far fa-edit"></i></a></span><span class="comment-icons"><a href="#"><i class="far fa-trash-alt"></i></a></span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="">
+                                <div class="comment-writer">
+                                    <input type="text">
+                                </div>
+                                <div class="comment-content">
+                                    <textarea></textarea>
+                                </div>
+                                <div class="comment-btn-area">
+                                    <button type="button">등록</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer th:replace="include/footer">
+    </footer>
+</body>
+
+<script src="/js/toast.js"></script>
+<script>
+
+    const viewer = toastui.Editor.factory({
+        el: document.querySelector('#viewer'),
+        viewer: true,
+        height: '500px',
+    });
+
+</script>
+
+</html>
