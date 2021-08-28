@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/articlewrite.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="/js/articlewrite.js"></script>
 
-    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+
 
 
     <title>한코딩 :: 글작성</title>
@@ -48,7 +50,7 @@
         <div class="board-write-wrapper">
             <form action="/article/write" method="post" name="write_form">
                 <input type="text" name="title" class="title" placeholder="제목" autocomplete="off">
-                <div id="editor"></div>
+                <div id="editor" style="font-family: 'LotteMartDream', sans-serif !important;"></div>
                 <div class="write-btn">
                     <a href="javascript:write()"><i class="far fa-edit"></i> 작성</a>
                 </div>
@@ -73,8 +75,6 @@
         initialEditType: 'wysiwyg',
         previewStyle: 'vertical'
     });
-
-
 
     function write() {
 
