@@ -39,5 +39,5 @@ public class Member {
     private LocalDateTime update;
 
     @Column(name = "member_deleted")
-    private int deleted;
+    private Integer deleted;
 }

@@ -16,7 +16,7 @@ public class ArticleService {
 
     public void insert(Article article) {
 
-        article.setWriter(1);
+//        article.setWriter(1);
         article.setProperty(1);
         article.setRegdate(LocalDateTime.now());
         article.setUpdate(LocalDateTime.now());

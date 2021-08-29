@@ -16,8 +16,9 @@ public class Article {
     @Column(name = "article_idx")
     private Integer idx;
 
-    @Column(name = "article_writer")
-    private Integer writer;
+    @ManyToOne
+    @JoinColumn(name = "article_writer")
+    private Member writer;
 
     @Column(name = "article_property")
     private Integer property;
