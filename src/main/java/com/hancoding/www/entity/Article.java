@@ -36,7 +36,7 @@ public class Article {
     private int like;
 
     @Column(name = "article_count")
-    private int count;
+    private int hit;
 
     @Column(name = "article_report")
     private int report;

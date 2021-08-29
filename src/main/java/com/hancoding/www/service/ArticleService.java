@@ -27,4 +27,12 @@ public class ArticleService {
 
         return articleRepository.findByIdx(idx);
     }
+
+    public void hit(int id) {
+
+        Article article = articleRepository.findById(id).get();
+        article.setHit(article.getHit() + 1);
+        articleRepository.save(article);
+
+    }
 }

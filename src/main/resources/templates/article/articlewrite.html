@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,28 +20,7 @@
     <title>한코딩 :: 글작성</title>
 </head>
 <body>
-<header>
-    <div class="layout topmenu">
-        <div><a href="index.html"><span class="logo mark"><i class="fas fa-code"></span></i><span class="logo logo-left">HAN</span><span class="logo"> Coding</span></a></div>
-
-        <div></div>
-        <div class="right-menu">
-            <ul>
-                <li><a href="#">강의</a></li>
-                <li><a href="articlelist.html">게시판</a></li>
-                <li><a href="login.html">로그인</a></li>
-            </ul>
-        </div>
-        <div class="ham-btn" id="ham-btn">
-            <a href="javascript:openSideNav()"><i class="fas fa-bars"></i></a>
-        </div>
-    </div>
-    <div class="sidenav" id="sidenav">
-        <a href="javascript:closeSideNav()">&times;</a>
-        <a href="#">강의</a>
-        <a href="articlelist.html">게시판</a>
-        <a href="login.html">로그인</a>
-    </div>
+<header th:replace="include/header">
 </header>
 <main>
     <div class="board-wrapper layout">
@@ -59,8 +38,7 @@
         </div>
     </div>
 </main>
-<footer>
-    <span>copyright 2021 한코딩. all rights reserved.</span>
+<footer th:replace="include/footer">
 </footer>
 </body>
 

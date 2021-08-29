@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/article")
 public class ArticleController {
 
-
     @Autowired
     private ArticleService articleService;
+
 
     // 게시글 리스트
     @GetMapping("/list")
@@ -43,9 +43,10 @@ public class ArticleController {
 
     // 게시물 상세 보기
     @GetMapping("/view")
-    public String articleView(Model model, @RequestParam("id") int idx) {
+    public String articleView(Model model, @RequestParam("id") int id) {
 
-        model.addAttribute("article", articleService.view(idx));
+        articleService.hit(id);
+        model.addAttribute("article", articleService.view(id));
 
         return "article/articleview";
     }
