@@ -1,9 +1,11 @@
 package com.hancoding.www.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -40,5 +42,5 @@ public class Article {
 
     @Column(name = "article_report")
     private int report;
-    
+
 }

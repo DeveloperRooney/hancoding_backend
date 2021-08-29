@@ -1,10 +1,18 @@
 package com.hancoding.www.entity;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
+@Data
+@ToString(exclude = {"articleList"})
 public class Member {
 
     @Id
@@ -32,5 +40,4 @@ public class Member {
 
     @Column(name = "member_deleted")
     private int deleted;
-
 }
