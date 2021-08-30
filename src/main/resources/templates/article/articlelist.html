@@ -61,15 +61,41 @@
                             <a href="articleview.html">[공지] 게시판 이용 공지</a>
                         </div>
                         <div class="mobile-content-info">
-                            <i class="far fa-user"></i> 관리자 / <i class="far fa-clock"></i> 2021-08-21  / <i class="far fa-eye"></i> 100 / <i class="far fa-thumbs-up"></i> 10
+                            <i class="far fa-user"></i> <span>관리자</span> /
+                            <i class="far fa-clock"></i> <span>2021-08-21</span>  /
+                            <i class="far fa-eye"></i> <span>100</span> /
+                            <i class="far fa-thumbs-up"></i> <span>10</span>
                         </div>
                     </div>
-                    <div class="article-writer">한코딩</div>
+                    <div class="article-writer">관리자</div>
                     <div class="article-count">100</div>
                     <div class="article-regdate">2021-08-22</div>
                    <div class="article-like">30</div>
 
                 </li>
+
+
+                <li th:each="article : ${articleList}">
+                    <div class="article-num" th:text="${article.idx}">1234</div>
+
+                    <div class="article-title content">
+                        <div class="mobile-content">
+                            <a href="articleview.html" th:text="${article.title}" th:href="@{/article/view(id=${article.idx})}">[공지] 게시판 이용 공지</a>
+                        </div>
+                        <div class="mobile-content-info">
+                            <i class="far fa-user"></i> <span th:text="${article.writer.nick}">관리자</span> /
+                            <i class="far fa-clock"></i> <span th:text="${#temporals.format(article.regdate, 'yyyy-MM-dd')}">2021-08-21</span>  /
+                            <i class="far fa-eye"></i> <span th:text="${article.hit}">100</span> /
+                            <i class="far fa-thumbs-up"></i> <span th:text="${article.like}">10</span>
+                        </div>
+                    </div>
+                    <div class="article-writer" th:text="${article.writer.nick}">한코딩</div>
+                    <div class="article-count" th:text="${article.hit}">100</div>
+                    <div class="article-regdate" th:text="${#temporals.format(article.regdate, 'yyyy-MM-dd')}">2021-08-22</div>
+                    <div class="article-like" th:text="${article.like}">30</div>
+
+                </li>
+
                 <li>
                     <div class="article-num">1234</div>
                     

@@ -4,6 +4,8 @@ import com.hancoding.www.entity.Article;
 import com.hancoding.www.entity.Member;
 import com.hancoding.www.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -14,9 +16,13 @@ public class ArticleService {
     @Autowired
     private ArticleRepository articleRepository;
 
+    public Page<Article> articleList(Pageable pageable) {
+
+        return articleRepository.findAll(pageable);
+    }
+
     public void insert(Article article) {
 
-//        article.setWriter(1);
         article.setProperty(1);
         article.setRegdate(LocalDateTime.now());
         article.setUpdate(LocalDateTime.now());
