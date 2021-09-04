@@ -1,7 +1,6 @@
 package com.hancoding.www.service;
 
 import com.hancoding.www.entity.Article;
-import com.hancoding.www.entity.Member;
 import com.hancoding.www.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

@@ -25,7 +25,17 @@
 <main>
     <div class="board-wrapper layout">
         <h1>글작성</h1>
-        <h2>자유롭게 글을 작성해주세요!</h2>
+        <div class="board-select">
+            <h2>자유롭게 글을 작성해주세요!</h2>
+            <select name="board_name">
+                <option value="웹개발">웹개발</option>
+                <option value="참고자료">참고자료</option>
+                <option value="자바">자바</option>
+                <option value="자유">자유</option>
+                <option value="빡침">빡침</option>
+                <option value="공지">공지</option>
+            </select>
+        </div>
         <div class="board-write-wrapper">
             <form action="/article/write" method="post" name="write_form">
                 <input type="text" name="title" class="title" placeholder="제목" autocomplete="off">
