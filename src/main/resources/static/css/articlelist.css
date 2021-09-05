@@ -17,17 +17,17 @@
     width: 160px;
 }
 
-.board-select select{
-    background-color: white;
-    padding : 6px;
-    width: 80px;
-    text-align: center;
-    border-radius: 4px;
-    box-sizing: border-box;
-    border: 1px solid #666;
-    color: #555;
-    
-}
+/*.board-select select{*/
+/*    background-color: white;*/
+/*    padding : 6px;*/
+/*    width: 80px;*/
+/*    text-align: center;*/
+/*    border-radius: 4px;*/
+/*    box-sizing: border-box;*/
+/*    border: 1px solid #666;*/
+/*    color: #555;*/
+/*    */
+/*}*/
 
 .write-btn {
     padding: 7.3px 5px;

@@ -27,7 +27,7 @@
         <h1>글작성</h1>
         <div class="board-select">
             <h2>자유롭게 글을 작성해주세요!</h2>
-            <select name="board_name">
+            <select id="board_select">
                 <option value="웹개발">웹개발</option>
                 <option value="참고자료">참고자료</option>
                 <option value="자바">자바</option>
@@ -38,6 +38,7 @@
         </div>
         <div class="board-write-wrapper">
             <form action="/article/write" method="post" name="write_form">
+                <input type="hidden" name="board_name">
                 <input type="text" name="title" class="title" placeholder="제목" autocomplete="off">
                 <div id="editor" style="font-family: 'LotteMartDream', sans-serif !important;"></div>
                 <div class="write-btn">
@@ -83,7 +84,10 @@
 
         }
 
-        write_form.submit();
+        write_form.board_name.value = document.getElementById('board_select').value;
+        alert(write_form.board_name.value);
+
+        // write_form.submit();
 
     }
 
